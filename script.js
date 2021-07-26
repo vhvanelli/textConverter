@@ -17,30 +17,28 @@ if (screenPx.matches) {
   }
 }
 
-
+midiaScreen(screenPx);
 
 const upper = () =>{
     afterText.style.textTransform = "none";
     const text = document.getElementById("text").value;
 
     afterText.innerHTML = text.toUpperCase();
-    midiaScreen(screenPx);
 }
 const lower = () =>{
     afterText.style.textTransform = "none";
     const text = document.getElementById("text").value;
     afterText.innerHTML =  text.toLowerCase();
-    midiaScreen(screenPx);
 }
 const capitalize = () =>{
     afterText.style.textTransform = "none";
     const text = document.getElementById("text").value;
     afterText.innerHTML = text.toLowerCase();
     afterText.style.textTransform = "capitalize" ;
-    midiaScreen(screenPx);
 }
 
 uppercaseButton.addEventListener("click", upper);
 lowercaseButton.addEventListener("click", lower);
 capitalizeButton.addEventListener("click", capitalize);
+screenPx.addEventListener("change", midiaScreen);
 
